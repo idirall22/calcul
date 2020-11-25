@@ -1,0 +1,17 @@
+syntax = "proto3";
+package calcul;
+option go_package = ".;calcul";
+
+
+message AddReq{
+    int64 a = 1;
+    int64 b = 2;
+}
+
+message AddRes{
+    int64 result = 1;
+}
+
+service CalculService{
+    rpc Add (AddReq) returns (AddRes);
+}
